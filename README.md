@@ -1,5 +1,6 @@
 # COA Connectivity Lab — `data-management`
 
+<<<<<<< HEAD
 Part of the **[Eco Connectivity Workflow](https://github.com/coa-connectivity-lab/eco-connectivity-workflow)** — a modular, reproducible stack for modelling ecological connectivity, integrating database management, machine learning, GIS visualisation, and biodiversity data ingestion.
 
 ---
@@ -23,11 +24,52 @@ flowchart TD
     C -->|Predicts resistance & connectivity| B
     C --> D[GIS Team]
     D -->|Visualises & exports maps| E[Figures & Publications]
+=======
+A modular, reproducible workflow for modelling ecological connectivity, integrating database management, machine learning, GIS visualisation, and biodiversity data ingestion.
+
+---
+
+## **Overview**
+
+The **Eco Connectivity Workflow** is a modular GitHub-based research stack designed to support scalable, reproducible ecological connectivity modelling.
+
+It enables multiple teams to work in parallel while maintaining full provenance tracking, reproducibility, and interoperability across all stages of the pipeline.
+
+The system transforms raw biodiversity and environmental data into **connectivity maps, resistance surfaces, and spatial conservation products**.
+
+---
+
+## **The Modular Stack**
+
+The workflow is organised as a **multi-repository ecosystem**, where each module has a clearly defined responsibility.
+
+| Module                   | Purpose                                                            | Repository                                                                             |
+| ------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| **Database**             | PostgreSQL/PostGIS schema, spatial views, and data relationships   | [`db-schema`](https://github.com/coa-connectivity-lab/db-schema)                       |
+| **Machine Learning**     | Resistance modelling, habitat suitability, connectivity algorithms | [`ml-models`](https://github.com/coa-connectivity-lab/ml-models)                       |
+| **GIS Projects**         | QGIS projects, styles, and cartographic outputs                    | [`qgis-projects`](https://github.com/coa-connectivity-lab/qgis-projects)               |
+| **Data Management**      | GBIF ingestion, raster preprocessing, and species harmonisation    | [`data-management`](https://github.com/coa-connectivity-lab/data-management)           |
+| **Reproducibility Logs** | Scenario tracking, outputs, and full execution provenance          | [`reproducibility-logs`](https://github.com/coa-connectivity-lab/reproducibility-logs) |
+
+---
+
+## **System Architecture**
+
+```mermaid
+flowchart TD
+    A[Data Team] -->|Ingest GBIF, rasters, field data| B[Database]
+    B -->|PostGIS schema + spatial views| C[ML Models]
+    C -->|Resistance & connectivity outputs| B
+    C --> D[GIS/QGIS]
+    D -->|Maps & spatial products| E[Figures & Publications]
+>>>>>>> cb220a0 (transfer data to connectivity workflow)
     A --> F[Reproducibility Logs]
     B --> F
     C --> F
+    D --> F
 ```
 
+<<<<<<< HEAD
 ### How the teams fit together
 
 1. **Data Team** — prepares and ingests GBIF occurrence records, environmental rasters, and camera trap data. This is the repository that team works in.
@@ -36,10 +78,32 @@ flowchart TD
 4. **GIS Team** — connects to the database in QGIS via [`qgis-projects`](https://github.com/coa-connectivity-lab/qgis-projects), visualises results, and exports maps.
 5. **Reproducibility Logs** — tracks all actions, scenario IDs, and git commits for full traceability.
 
+=======
+---
+
+## **How the Workflow Works**
+
+1. **Data ingestion**
+   Environmental rasters, GBIF occurrence records, and field data are ingested and standardised.
+
+2. **Database structuring**
+   All spatial data is stored in a PostGIS database with reproducible schema definitions.
+
+3. **Modelling layer**
+   Machine learning and ecological models generate resistance surfaces and connectivity predictions.
+
+4. **GIS & visualization**
+   Outputs are visualised in QGIS and prepared for maps, figures, and reporting.
+
+5. **Reproducibility tracking**
+   Every run is logged with scenario IDs, configuration snapshots, and Git commit hashes.
+
+>>>>>>> cb220a0 (transfer data to connectivity workflow)
 ---
 
 ## This Repository — `data-management`
 
+<<<<<<< HEAD
 This repo covers everything from raw GBIF downloads to analysis-ready species layers, organised into nine ecological functional groups. Outputs feed directly into the ML and GIS modules.
 
 ### Pipeline notebooks (run in order)
@@ -109,8 +173,17 @@ We are committed to maintaining a welcoming, inclusive, and collaborative enviro
 * GNU Guix (primary environment) or conda
 * QGIS ≥ 3.28 (for project visualisation)
 * PostgreSQL + PostGIS (or Docker setup — see [`db-schema`](https://github.com/coa-connectivity-lab/db-schema))
-* Git
+=======
+### **Prerequisites**
 
+* Python ≥ 3.9
+>>>>>>> cb220a0 (transfer data to connectivity workflow)
+* Git
+* PostgreSQL + PostGIS (optional but recommended)
+* QGIS ≥ 3.28
+* GNU Guix or Conda (for reproducibility)
+
+<<<<<<< HEAD
 ### 1. Clone the Repository
 
 ```bash
@@ -121,11 +194,38 @@ cd data-management
 ### 2. Create the Reproducible Environment
 
 Using GNU Guix:
+=======
+---
+
+### **1. Clone the full ecosystem**
+
+```bash
+git clone https://github.com/coa-connectivity-lab/eco-connectivity-workflow.git
+cd eco-connectivity-workflow
+```
+
+---
+
+### **2. Clone all modules**
+
+```bash
+git clone https://github.com/coa-connectivity-lab/db-schema.git
+git clone https://github.com/coa-connectivity-lab/ml-models.git
+git clone https://github.com/coa-connectivity-lab/qgis-projects.git
+git clone https://github.com/coa-connectivity-lab/data-management.git
+git clone https://github.com/coa-connectivity-lab/reproducibility-logs.git
+```
+
+---
+
+### **3. Initialize database**
+>>>>>>> cb220a0 (transfer data to connectivity workflow)
 
 ```bash
 guix shell -m env/manifest.scm
 ```
 
+<<<<<<< HEAD
 or:
 
 ```bash
@@ -133,12 +233,29 @@ or:
 ```
 
 Verify installation:
+=======
+---
+
+### **4. Run the ML pipeline**
+
+```bash
+cd ml-models
+python scripts/extract_features.py
+python scripts/resistance_model.py
+python scripts/predict_connectivity.py
+```
+
+---
+
+### **5. Open GIS projects**
+>>>>>>> cb220a0 (transfer data to connectivity workflow)
 
 ```bash
 python --version
 jupyter --version
 ```
 
+<<<<<<< HEAD
 ### 3. Add Source Data
 
 #### GBIF Occurrence Records
@@ -202,9 +319,82 @@ The pipeline automatically:
 6. Runs Omniscape connectivity analyses.
 7. Produces multi-species connectivity products.
 8. Exports maps, figures, and summary tables.
+=======
+---
+
+## **Data Flow**
+
+* Raw data → `data-management`
+* Structured spatial data → `db-schema`
+* Models → `ml-models`
+* Visualization → `qgis-projects`
+* Provenance → `reproducibility-logs`
+
+---
+
+## **Reproducibility Principles**
+
+This workflow is designed to ensure:
+
+* Full pipeline reproducibility
+* Versioned datasets and configurations
+* Traceable model outputs
+* Environment consistency
+* Cross-module dependency control
+
+Each run is linked to:
+
+* Git commit hash
+* Scenario ID
+* Input dataset versions
+* Output artifacts
+
+---
+
+## **Planned Enhancements**
+
+* Docker & Docker Compose full-stack deployment
+* GitHub Actions CI/CD for validation of:
+
+  * SQL schemas
+  * Python pipelines
+  * QGIS project integrity
+* Cloud-native raster handling (COGs on S3/GCS)
+* Automated scenario comparison dashboard
+* Distributed processing for large-scale landscapes
+
+---
+
+## **Contributing**
+
+We welcome contributions from:
+
+* Ecologists
+* GIS analysts
+* Data scientists
+* Software engineers
+* Conservation practitioners
+* Students
+
+### Contribution workflow
+
+1. Open an issue to discuss changes
+2. Fork the relevant module repository
+3. Submit a pull request
+4. Ensure reproducibility standards are met
+
+---
+
+## **Code of Conduct**
+
+This project follows a collaborative and inclusive research policy. All contributors are expected to engage respectfully and constructively.
+
+---
+>>>>>>> cb220a0 (transfer data to connectivity workflow)
 
 ### 6. Inspect Outputs
 
+<<<<<<< HEAD
 Key outputs are written to `data/processed/`.
 
 Species collation products (from `notebooks/03_collate_all_species.ipynb`):
@@ -409,3 +599,7 @@ Before publishing results, confirm:
 ## License
 
 GNU GPL v3 — freely explore and adapt this workflow.
+=======
+GNU GPL v3 — free to use, adapt, and extend with attribution.
+
+>>>>>>> cb220a0 (transfer data to connectivity workflow)
