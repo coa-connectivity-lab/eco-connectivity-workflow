@@ -13,7 +13,7 @@ The initiative is structured as a **modular GitHub organisation**, allowing mult
 | **Database** | PostgreSQL/PostGIS schema and workflow views | [`db-schema`](https://github.com/coa-connectivity-lab/db-schema) |
 | **Machine Learning** | Python scripts for resistance modelling and connectivity analysis | [`ml-models`](https://github.com/coa-connectivity-lab/ml-models) |
 | **GIS Projects** | QGIS projects, styles, and figure templates | [`qgis-projects`](https://github.com/coa-connectivity-lab/qgis-projects) |
-| **Data Management** | Ingests GBIF occurrence records and environmental rasters | [`data-management`](https://github.com/coa-connectivity-lab/data-management) ← **you are here** |
+| **Data Management** | Ingests GBIF occurrence records and environmental rasters | [`data-management`](https://github.com/coa-connectivity-lab/data-management) ← **you need to go here** |
 | **Reproducibility Logs** | Tracks scenarios, git commits, and outputs for traceability | [`reproducibility-logs`](https://github.com/coa-connectivity-lab/reproducibility-logs) |
 
 ```mermaid
