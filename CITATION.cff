@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this workflow, please cite it as below."
+title: "Greater Côa Valley eco-connectivity workflow"
+abstract: >-
+  A reproducible, pure-Python pipeline for ecological connectivity analysis in
+  resource-limited rewilding projects, following Prima et al. (2024)'s
+  multi-species framework, with the Greater Côa Valley, Portugal, as the worked
+  case study.
+type: software
+authors:
+  - given-names: Linda
+    family-names: Angulo Lopez
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # add when available
+  - name: "The Côa Connectivity Lab contributors"
+repository-code: "https://github.com/coa-connectivity-lab/eco-connectivity-workflow"
+license: MIT
+keywords:
+  - ecological connectivity
+  - circuit theory
+  - landscape ecology
+  - rewilding
+  - reproducible research
+  - GBIF
+  - PostGIS
+  - QGIS

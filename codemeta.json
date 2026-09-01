@@ -1,0 +1,28 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Greater Côa Valley eco-connectivity workflow",
+  "description": "A reproducible, pure-Python pipeline for ecological connectivity analysis in resource-limited rewilding projects, following Prima et al. (2024)'s multi-species framework, with the Greater Côa Valley, Portugal, as the worked case study.",
+  "codeRepository": "https://github.com/coa-connectivity-lab/eco-connectivity-workflow",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python 3.12",
+  "keywords": [
+    "ecological connectivity",
+    "circuit theory",
+    "landscape ecology",
+    "rewilding",
+    "reproducible research",
+    "GBIF",
+    "PostGIS",
+    "QGIS"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Linda",
+      "familyName": "Angulo Lopez"
+    }
+  ],
+  "_comment": "Regenerate with the CodeMeta Generator (https://codemeta.github.io/codemeta-generator/) or codemetapy once dependencies and authors are settled."
+}

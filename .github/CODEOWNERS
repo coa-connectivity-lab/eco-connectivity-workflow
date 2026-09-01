@@ -1,0 +1,21 @@
+# Code owners for eco-connectivity-workflow (the umbrella repo).
+# Each module repository carries its own CODEOWNERS for the code it holds.
+#
+# Syntax: https://docs.github.com/articles/about-code-owners
+# Every entry must resolve to a team or user with write access, or GitHub ignores it.
+
+# Default: any maintainer reviews
+*                       @coa-connectivity-lab/maintainers
+
+# Shared docs and governance
+/docs/                  @coa-connectivity-lab/maintainers
+/README.md              @coa-connectivity-lab/maintainers
+/CONTRIBUTING.md        @coa-connectivity-lab/maintainers
+/GOVERNANCE.md          @coa-connectivity-lab/maintainers
+
+# CI and repo config
+/.github/               @coa-connectivity-lab/maintainers
+
+# Citation / software metadata: keep the data steward in the loop
+/CITATION.cff           @coa-connectivity-lab/maintainers
+/codemeta.json          @coa-connectivity-lab/maintainers
