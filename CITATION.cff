@@ -10,7 +10,7 @@ type: software
 authors:
   - given-names: Linda
     family-names: Angulo Lopez
-    # orcid: "https://orcid.org/0000-0000-0000-0000"  # add when available
+    orcid: "https://orcid.org/0009-0009-5689-7148"
   - name: "The Côa Connectivity Lab contributors"
 repository-code: "https://github.com/coa-connectivity-lab/eco-connectivity-workflow"
 license: MIT
@@ -23,3 +23,21 @@ keywords:
   - GBIF
   - PostGIS
   - QGIS
+preferred-citation:
+  type: article
+  title: >-
+    Movement, Water, Connection: a reproducible Python connectivity workflow
+    and field illustration for the Greater Côa Valley rewilding landscape,
+    Portugal
+  authors:
+    - given-names: Linda
+      family-names: Angulo Lopez
+      orcid: "https://orcid.org/0009-0009-5689-7148"
+      affiliation: Rewilding Portugal
+  doi: "10.5281/zenodo.22979020"
+  url: "https://doi.org/10.5281/zenodo.22979020"
+  publisher:
+    name: Zenodo
+  version: "v0.1 (preprint)"
+  date-released: "2026-09-26"
+  year: 2026

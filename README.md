@@ -1,5 +1,7 @@
 # Greater Côa Valley eco-connectivity workflow
 
+[![Preprint DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22979020.svg)](https://doi.org/10.5281/zenodo.22979020)
+
 **A reproducible, pure-Python pipeline for ecological connectivity analysis in
 resource-limited rewilding projects. The Greater Côa Valley, Portugal, is the
 worked case study.**
@@ -26,7 +28,7 @@ The baseline study is written up as a preprint on Zenodo:
 > Angulo Lopez, L. (2026). *Movement, Water, Connection: a reproducible Python
 > connectivity workflow and field illustration for the Greater Côa Valley rewilding
 > landscape, Portugal* (Version v0.1, preprint). Zenodo.
-> <https://zenodo.org/records/22979020>
+> <https://doi.org/10.5281/zenodo.22979020>
 
 It applies the pure-Python circuit-theory workflow to a 10,230 km²
 catchment-extended study area, with ten focal species grouped by movement medium.
