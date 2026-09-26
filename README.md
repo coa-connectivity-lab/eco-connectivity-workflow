@@ -19,6 +19,24 @@ organisation should be able to reproduce the whole analysis on a laptop, with a
 standard scientific Python environment, no specialist runtime, no paid services,
 and no cluster.
 
+## Preprint
+
+The baseline study is written up as a preprint on Zenodo:
+
+> Angulo Lopez, L. (2026). *Movement, Water, Connection: a reproducible Python
+> connectivity workflow and field illustration for the Greater Côa Valley rewilding
+> landscape, Portugal* (Version v0.1, preprint). Zenodo.
+> <https://zenodo.org/records/22979020>
+
+It applies the pure-Python circuit-theory workflow to a 10,230 km²
+catchment-extended study area, with ten focal species grouped by movement medium.
+It extends Prima et al. (2024) with three penalties drawn from local evidence:
+(i) a recency-weighted fire penalty from MODIS burned area (2015 to July 2025);
+(ii) a distance-decayed penalty from 22 field-recorded barriers; and (iii) a flat
+penalty over two UNESCO heritage areas. The strongest combined corridor follows
+the lower Côa north to the Douro. The field illustrations paired with the maps will
+be published during Global Artivism Month (1 November to 10 December 2026).
+
 ## Why pure Python
 
 The first prototype used Julia with Omniscape.jl, managed through Guix. Getting
