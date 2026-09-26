@@ -34,8 +34,7 @@ preferred-citation:
       family-names: Angulo Lopez
       orcid: "https://orcid.org/0009-0009-5689-7148"
       affiliation: Rewilding Portugal
-  doi: "10.5281/zenodo.22979020"
-  url: "https://doi.org/10.5281/zenodo.22979020"
+  url: "https://zenodo.org/records/22979020"
   publisher:
     name: Zenodo
   version: "v0.1 (preprint)"
